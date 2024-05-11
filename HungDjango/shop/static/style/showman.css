@@ -1,0 +1,47 @@
+
+
+.product-detail {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-detail:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.product-detail h3 {
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.product-detail p {
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+/* Nút bấm */
+button {
+    background-color: #0056b3; /* Màu nền cho nút */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #003d82; /* Màu nền khi hover cho nút */
+}

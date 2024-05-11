@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Introduce 😍
+{% endblock %}
+
+{% block styles %}
+<link href="{% static '/style/index.css' %}" rel="stylesheet">
+<link href="{% static '/style/index1.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<h1>
+    <span class="underlined underline-blue">H<span class="ball-blue"></span>ELLO</span>,
+    <span class="underlined underline-clip">W<span class="ball-clip"></span>ELCOME</span>
+    <span class="underlined underline-mask">T<span class="ball-mask"></span>O</span>
+    <span class="underlined underline-yelow">O<span class="ball-yelow"></span>UR</span>
+    <span class="underlined underline-overflow">W<span class="ball-overflow"></span>EBSITE</span>
+</h1>
+<img src="{% static '/image/con-lon.gif' %}" alt="My image"  height="300px" width="300px" />
+
+  <div class="">
+
+  <a class="button" href="{% url 'home' %}" style="--color: #6eff3e;">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Click Home
+  </a>
+</div>
+
+{% endblock %}

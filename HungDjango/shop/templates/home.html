@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+{% include 'style.html' %}
+<body>
+    <!-- Navigation -->
+    {% include 'nav.html' %}
+    <!-- Main Content -->
+    <main>
+        {% block women %}
+        {% block man %}
+        <section class="wrapper">
+            <div class="top">Shop CDB</div>
+            <div class="bottom" aria-hidden="true">Shop CDB</div>
+        </section>
+        <div class="image-container">
+            <img src="{% static '/images/do-nam.jpg' %}" class="rounded-image" alt="do nam🍸">
+            <img src="{% static '/images/do-nu.jpg' %}" class="rounded-image" alt="do nu🍸">
+            <img src="{% static '/images/book.jpg' %}" class="rounded-image" alt="sach🍸">
+            <img src="{% static '/images/dep.jpg' %}" class="rounded-image" alt="nnn🍸">
+        </div>
+        <h2>Đây Là Sản Phẩm Của Chúng Tôi Có!</h2>
+        <p class="animated-intro">Các sản phẩm tại Shop CDB được thiết kế bởi đội ngũ nhà thiết kế tài năng, luôn bắt kịp xu hướng thời trang mới nhất và mang đến cho bạn những phong cách thời trang độc đáo, không thể nhầm lẫn.</p>
+        {% endblock man %}
+        {% endblock women %}
+    </main>
+    {% include 'footer.html' %}
+</body>
+</html>

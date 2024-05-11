@@ -1,0 +1,53 @@
+<header>
+    <h1>Welcome to our Shop CDB!</h1>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li>
+            <a href="{% url 'home' %}">Shop</a>
+            <ul>
+                <li>
+                    <a href="{% url 'man' %}" class="nav-item" >Man</a>
+                </li>
+                <li>
+                    <a href="{% url 'women' %}" class="nav-item" >Women</a>
+                </li>
+                <li>
+                    <a href="{% url 'more' %}" class="nav-item" >More</a>
+                </li>
+                <li>
+                    <a href="{% url 'books' %}" class="nav-item">Books and Notebooks</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li>
+            <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                Cart
+            </a>
+        </li>
+    <li>
+        <a href="{% url 'home' %}"><i class="fas fa-user"></i>Account</a>
+        <ul>
+            <li>
+                <a href="{% url 'signin' %}" class="nav-item">Sign In</a>
+            </li>
+            <li>
+                <a href="{% url 'signup' %}" class="nav-item">Sign Up</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <form action="{% url 'search' %}" method="get" class="search-form">
+            <input type="text" name="q" placeholder="search" requied />
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </li>
+    </ul>
+</nav>

@@ -1,0 +1,21 @@
+<!-- Footer -->
+<footer style="background-color: #343a40; text-align: center; padding: 20px; color: white; width: 100%; display: flex; justify-content: space-around;">
+    <div style="margin-bottom: 20px;">
+        <h3>Website Information</h3>
+        <p>Ngày tạo: {{ footer_info.creation_date }}</p>
+        <p>Company: {{ footer_info.company_name }}</p>
+        <p>Địa chỉ: {{ footer_info.address }}</p>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <h3>Contact</h3>
+        <p>Name: {{ footer_info.contact_name }}</p>
+        <p>Number Phone: {{ footer_info.phone_number }}</p>
+        <p>Email: {{ footer_info.email}}</p>
+    </div>
+    <div>
+        <h3>Social network</h3>
+        <p>Facebook: <a href="{{ footer_info.facebook_url }}" style="color: white;">Quang Hung</a></p>
+        <p>Zalo: {{ footer_info.zalo_number }}</p>
+        <p>Instagram: <a href="{{ footer_info.instagram_url }}" style="color: white;">Hung2003</a></p>
+    </div>
+</footer>

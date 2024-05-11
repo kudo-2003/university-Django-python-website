@@ -1,0 +1,14 @@
+{% load static %}
+{% include '../style.html' %}
+{% include 'nav.html' %}
+<main>
+{% block manshow %}
+<div class="product-detail">
+    <img src="{% static product.image %}" alt="{{ product.name }}">
+    <h3>{{ product.name }}</h3>
+    <p>Giá: {{ product.price }}$</p>
+    <p>Mô tả: {{ product.description }}</p>
+</div>
+{% endblock %}
+</main>
+{% include '../footer.html' %}

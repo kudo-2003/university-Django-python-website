@@ -1,0 +1,29 @@
+{% load static %}
+{% include '../style.html' %}
+{% include 'nav.html' %}
+    {% block women %}
+    <main>
+        <h1>Women</h1>
+        {% block search %}
+        <div class="products-container">
+            {% for product in shop_women %}
+    <div class="product rounded-corners">
+        <!-- Đảm bảo rằng 'product.image' có giá trị và 'product.image.url' trả về đường dẫn đúng -->
+        <img class="rounded-corners" src="{{ product.image.url }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>Giá: {{ product.price }}$</p>
+        <a href="{% url 'product_detail' product.id %}" class="more-info-button">Show</a>            
+        <form action="{% url 'add_to_cart' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="product_id" value="{{ product.id }}">
+            <input type="submit" value="Buy now 💵" class="buy-now-button">
+        </form>
+    </div>
+{% empty %}
+    <p>No products available.</p>
+{% endfor %}
+        </div>
+        {% endblock search %}
+</main>
+    {% endblock women %}
+    {% include '../footer.html' %}

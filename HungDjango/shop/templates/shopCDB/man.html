@@ -1,0 +1,23 @@
+{% load static %}
+{% include '../style.html' %}
+{% include 'nav.html' %}
+    {% block man %}
+    <main>
+    <h1>Shop Man 🧑</h1>
+    {% block manshow %}
+    <div class="products-container">
+        {% for product in products %}
+        <div class="product rounded-corners">
+            <img class="rounded-corners" src="{% static product.image %}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p>Giá: {{ product.price }}$</p>
+            <button class="favorite-button">{{ product.favorite|yesno:"Favorited,Add to favorites" }}</button>
+            <a href="{% url 'product_detail' product.id %}" class="more-info-button">Show</a>            
+            <button class="buy-now-button">Buy now 💵</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock manshow %}
+</main>
+    {% endblock man %}
+    {% include '../footer.html' %}

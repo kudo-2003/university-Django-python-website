@@ -1,0 +1,21 @@
+{% include 'style.html' %}
+{% include 'nav.html' %}
+{% load static %}
+{% block search %}
+    <h2>Kết quả tìm kiếm</h2>
+    <div class="products-container">
+        {% for product in products %}
+        <div class="product">
+            <!-- Sử dụng 'product.image.url' để lấy URL của hình ảnh -->
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p>Giá: {{ product.price }}$</p>
+            <p>{{ product.description }}</p>
+            <a href="{% url 'product_detail' product.id %}">Xem chi tiết</a>
+        </div>
+        {% empty %}
+        <p>Không tìm thấy sản phẩm nào.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% include 'footer.html' %}

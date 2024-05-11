@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/style/signIn.css' %}">
+</head>
+<body>
+  <form method="post">
+    <h2>Sign In</h2>
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <button type="submit">Sign In</button>
+    {% if error %}
+      <p>{{ error }}</p>
+    {% endif %}
+  </form>
+</body>
+</html>
